@@ -1,3 +1,5 @@
+### Questions
+
 When to exit the loop? Should we use `left < right` or `left <= right` as the while loop condition?
 
 How to initialize the boundary variable `left` and `right`?
