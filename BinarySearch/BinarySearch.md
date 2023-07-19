@@ -31,6 +31,9 @@ def binary_search(array) -> int:
 
     If the array suffices ....FFFFFFFTTTTTT.... for the condition in the problem, so you want to find the first True value. Return `left` in outer loop.
 
+3. Design the condition function. This is the most difficult and most beautiful part. Needs lots of practice.
+
+   
 ## Questions
 
 ### [First Bad Version](https://leetcode.com/problems/first-bad-version/)
@@ -53,5 +56,3 @@ class Solution:
                 left = mid + 1
         return left
 ```
-
-3. Design the condition function. This is the most difficult and most beautiful part. Needs lots of practice.
