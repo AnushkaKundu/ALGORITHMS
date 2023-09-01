@@ -60,5 +60,5 @@ public:
 };
 ```
 
-To find all the subsets, refer [Combination Sum (With Repeatation) - Backtracking](https://github.com/AnushkaKundu/ALGORITHMS/blob/e00d95ee13e66d17e7196f7187c5a911f83b921d/Backtracking/Combination%20Sum%20(With%20Repeatation).md) problem.
+To find all the subsets, refer [Combination Sum (With Repeatation) - Backtracking](https://github.com/AnushkaKundu/ALGORITHMS/blob/7e920c7ba91cfe37ed0862caf90750ba8b17a875/DynamicProgramming/Subset%20Sum%20or%20Target%20Sum%20(With%20repeating%20elements).md) problem.
 
