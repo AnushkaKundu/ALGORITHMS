@@ -6,7 +6,8 @@ public:
         if (currentWeight > target) return 0;
         if (currentWeight == target) return 1;
         if (index < 0) return 0;
-        return canAchieveTarget(nums, target, currentWeight + nums[index], index - 1) || canAchieveTarget(nums, target, currentWeight, index - 1);
+        return canAchieveTarget(nums, target, currentWeight + nums[index], index - 1)
+|| canAchieveTarget(nums, target, currentWeight, index - 1);
     }
 
     bool canPartition(vector<int>& nums) {
