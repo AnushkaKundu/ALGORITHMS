@@ -59,3 +59,6 @@ public:
     }
 };
 ```
+
+To find the subsets, refer [Combination Sum](https://github.com/AnushkaKundu/ALGORITHMS/blob/e00d95ee13e66d17e7196f7187c5a911f83b921d/Backtracking/Combination%20Sum%20(With%20Repeatation).md) problem.
+
