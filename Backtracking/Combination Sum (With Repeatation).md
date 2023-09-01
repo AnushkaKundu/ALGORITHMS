@@ -2,7 +2,7 @@ Input: Array of numbers, a target number.
 
 Output: All subsets that add up to target.
 
-To find if such a solution exists or not (bool output) refer [Subset Sum or Target Sum (Without repeating elements)](https://github.com/AnushkaKundu/ALGORITHMS/blob/189bc56c7afd3a9f04c3fbb3fdf1c7a8ca5572d1/DynamicProgramming/Subset%20Sum%20or%20Target%20Sum%20(Without%20repeating%20elements).md)
+To find if such a solution exists or not (bool output) refer [Subset Sum or Target Sum (Without repeating elements)](https://github.com/AnushkaKundu/ALGORITHMS/blob/189bc56c7afd3a9f04c3fbb3fdf1c7a8ca5572d1/DynamicProgramming/Subset%20Sum%20or%20Target%20Sum%20(Without%20repeating%20elements).md) - Dynamic Programming
 
 ```
 class Solution {
