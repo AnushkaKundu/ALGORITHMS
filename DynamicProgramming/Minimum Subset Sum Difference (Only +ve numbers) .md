@@ -1,4 +1,5 @@
 Problem Statement
+
 Input: Array of numbers.
 Output: Minimum possible absolute difference between the sum of elements of the 2 partitions of the array.
 
