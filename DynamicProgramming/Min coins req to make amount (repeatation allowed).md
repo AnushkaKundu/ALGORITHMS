@@ -1,3 +1,4 @@
+```
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
@@ -15,3 +16,4 @@ public:
         return dp[amount] == Max ? -1 : dp[amount];
     }
 };
+```
