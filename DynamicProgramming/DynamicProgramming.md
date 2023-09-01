@@ -9,5 +9,7 @@
 
 [Count Subsets with Sum K](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Count%20Subsets%20with%20Sum%20K.md)
 
+[Minimum Subset Sum Difference (Only +ve numbers)]()
+
 ## Coin change
 [Min coins req to make amount (repetition allowed)](https://github.com/AnushkaKundu/ALGORITHMS/blob/14bb4f331dd27a667470f1cd1e7f107b67263df5/DynamicProgramming/Min%20coins%20req%20to%20make%20amount%20(repetition%20allowed).md)
