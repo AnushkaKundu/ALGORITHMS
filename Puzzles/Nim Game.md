@@ -1,4 +1,4 @@
-You are playing the following Nim Game with your friend:
+Question:
 
 Initially, there is a heap of stones on the table.
 
