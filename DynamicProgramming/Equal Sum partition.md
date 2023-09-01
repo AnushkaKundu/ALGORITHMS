@@ -1,4 +1,5 @@
 Input: Array of numbers. 
+
 Output: Is it possible to partition the numbers of the array in 2 parts such that the sum of the elements of both partitions are equal ?
 
 ## Recursive:
@@ -57,6 +58,7 @@ public:
 Stats:
 `
 208 ms
+
 94.9 MB
 `
 
@@ -104,5 +106,6 @@ public:
 Stats:
 `
 147 ms
+
 11.7 MB
 `
