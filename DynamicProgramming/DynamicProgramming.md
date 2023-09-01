@@ -17,7 +17,7 @@
 [No of ways to make amount using coins / Count Subsets with Sum K](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Count%20Subsets%20with%20Sum%20K.md)
 
 ## Longest Common Subsequence type
-[LCS]()
+[Longest Common Subsequence]()
 
 [Shortest Common Supersequence]()
 
@@ -26,6 +26,8 @@
 [Longest Repeating subsequence]()
 
 [Subsequence Pattern Matching]()
+
+[Longest Palindromic subsequence]()
 
 [Longest Palindromic substring]()
 
