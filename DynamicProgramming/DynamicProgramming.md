@@ -15,3 +15,22 @@
 [Min coins req to make amount (repetition allowed)](https://github.com/AnushkaKundu/ALGORITHMS/blob/14bb4f331dd27a667470f1cd1e7f107b67263df5/DynamicProgramming/Min%20coins%20req%20to%20make%20amount%20(repetition%20allowed).md)
 
 [No of ways to make amount using coins / Count Subsets with Sum K](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Count%20Subsets%20with%20Sum%20K.md)
+
+## Longest Common Subsequence type
+[LCS]()
+
+[Shortest Common Supersequence]()
+
+[Minimum number of insertions and deletions]()
+
+[Longest Repeating subsequence]()
+
+[Subsequence Pattern Matching]()
+
+[Longest Palindromic substring]()
+
+[Count of palindromic substring]()
+
+[Minimum number of deletions to make a palindrome]()
+
+[Minimum number of insertions to make a palindrome]()
