@@ -7,7 +7,7 @@
 
 [Equal Sum partition](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Equal%20Sum%20partition.md)
 
-[Count Subsets with Sum K](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Count%20Subsets%20with%20Sum%20K.md)
+[Count Subsets with Sum K / No of ways to make amount using coins](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/DynamicProgramming/Count%20Subsets%20with%20Sum%20K.md)
 
 [Minimum Subset Sum Difference (Only +ve numbers)](https://github.com/AnushkaKundu/ALGORITHMS/blob/137da387a3e0ac5e981947350a1e1bb1a6af3665/DynamicProgramming/Minimum%20Subset%20Sum%20Difference%20(Only%20%2Bve%20numbers)%20.md)
 
