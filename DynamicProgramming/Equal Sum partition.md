@@ -1,3 +1,6 @@
+Input: Array of numbers. 
+Output: Is it possible to partition the numbers of the array in 2 parts such that the sum of the elements of both partitions are equal ?
+
 ## Recursive:
 ```
 class Solution {
