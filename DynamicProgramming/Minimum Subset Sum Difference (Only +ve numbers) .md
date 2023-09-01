@@ -42,3 +42,5 @@ int minSubsetSumDifference(vector<int>& nums, int n)
 ```
 
 [View in Coding Ninjas](https://www.codingninjas.com/studio/problems/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum_842494?leftPanelTab=0)
+
+If the array also has negative numbers. [Follow this](https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/solutions/1513298/c-meet-in-middle/)
