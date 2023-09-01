@@ -1,4 +1,5 @@
 Input: Array of numbers, a target number.
+
 Output: Can a subset of the array sum up to the target ?
 
 Top - Down:
