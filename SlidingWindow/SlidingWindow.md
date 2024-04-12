@@ -1,6 +1,6 @@
 [List](https://leetcode.com/list/?selectedList=mxhm4ulv)
 
-# Minimum Size Subarray Sum
+## Minimum Size Subarray Sum
 Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
 Example 1:
 
@@ -38,7 +38,7 @@ int minSubArrayLen(int s, vector<int>& A) {
 }
 ```
 
-# 
+## 
 \(Minimum Size Subarray Sum with negative numbers allowed\)
 [Explanation](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/solutions/143726/C++JavaPython-O(N)-Using-Deque/)
 
@@ -84,7 +84,7 @@ int shortestSubarray(vector<int> A, int K) {
 }
 ```
 
-# Count Number of Nice Subarrays
+## Count Number of Nice Subarrays
 Count SA with k odd numbers.
 Example 1:
 
@@ -124,10 +124,10 @@ int atMost(vector<int>& A, int k) {
     return res;
 }
 ```
-# Get Equal Substrings Within Budget
+## Get Equal Substrings Within Budget
 Try yourself.
 
-# Subarrays with K Different Integers
+## Subarrays with K Different Integers
 Find Number of Subarrays with K Different Integers.
 
 Example 1:
@@ -165,10 +165,10 @@ int atMostK(vector<int>& A, int K) {
     return res;
 }
 ```
-# Fruit Into Baskets
+## Fruit Into Baskets
 Similar to prev 2.
 
-# Frequency of the Most Frequent Element
+## Frequency of the Most Frequent Element
 The frequency of an element is the number of times it occurs in an array.
 
 You are given an integer array nums and an integer k. In one operation, you can choose an index of nums and increment the element at that index by 1.
@@ -226,7 +226,7 @@ public:
     }
 };
 ```
-# Find the Longest Equal Subarray
+## Find the Longest Equal Subarray
 You are given a 0-indexed integer array nums and an integer k.
 
 A subarray is called equal if all of its elements are equal. Note that the empty subarray is an equal subarray.
@@ -275,7 +275,7 @@ int longestEqualSubarray(vector<int>& nums, int k) {
 }
 ```
 
-# Longest Nice Subarray
+## Longest Nice Subarray
 You are given an array nums consisting of positive integers.
 
 We call a subarray of nums nice if the bitwise AND of every pair of elements that are in different positions in the subarray is equal to 0.
