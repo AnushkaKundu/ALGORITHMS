@@ -1,11 +1,16 @@
 ## Meeting rooms I
 Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+
 Example 1:
+
 Input: [[0,30],[5,10],[15,20]]
+
 Output: false
 
 Example 2:
+
 Input: [[7,10],[2,4]]
+
 Output: true
 
 ```
@@ -22,22 +27,31 @@ bool Solution::canAttend(vector<vector<int> > &A) {
 
 ## Meeting rooms II
 Given an 2D integer array A of size N x 2 denoting time intervals of different meetings.
+
 Where:
+
 A[i][0] = start time of the ith meeting.
+
 A[i][1] = end time of the ith meeting.
 
 Find the minimum number of conference rooms required so that all meetings can be done.
+
 Note :- If a meeting ends at time t, another meeting starting at time t can use the same conference room
 
 Problem Constraints
+
 1 <= N <= 105
+
 0 <= A[i][0] < A[i][1] <= 2 * 109
 
 Input Format
+
 The only argument given is the matrix A.
 
 Output Format
+
 Return the minimum number of conference rooms required so that all meetings can be done.
+
 
 ```
 int Solution::rooms(vector<vector<int> > &A) {
@@ -66,6 +80,7 @@ int Solution::rooms(vector<vector<int> > &A) {
 ```
 
 ## Meeting Rooms III
+
 Problem: You are given an integer n. There are n rooms numbered from 0 to n - 1.
 
 You are given a 2D integer array meetings where meetings[i] = [starti, endi] means that a meeting will be held during the half-closed time interval [starti, endi). All the values of starti are unique.
@@ -82,10 +97,12 @@ Return** the number of the room that held the most meetings. If there are multip
 
 A half-closed interval [a, b) is the interval between a and b including a and not including b.
 
-  Example 1:
+Example 1:
 
 Input: n = 2, meetings = [[0,10],[1,5],[2,7],[3,4]]
+
 Output: 0
+
 Explanation:
 - At time 0, both rooms are not being used. The first meeting starts in room 0.
 - At time 1, only room 1 is not being used. The second meeting starts in room 1.
@@ -94,10 +111,13 @@ Explanation:
 - At time 5, the meeting in room 1 finishes. The third meeting starts in room 1 for the time period [5,10).
 - At time 10, the meetings in both rooms finish. The fourth meeting starts in room 0 for the time period [10,11).
 Both rooms 0 and 1 held 2 meetings, so we return 0. 
+
 Example 2:
 
 Input: n = 3, meetings = [[1,20],[2,10],[3,5],[4,9],[6,8]]
+
 Output: 1
+
 Explanation:
 - At time 1, all three rooms are not being used. The first meeting starts in room 0.
 - At time 2, rooms 1 and 2 are not being used. The second meeting starts in room 1.
