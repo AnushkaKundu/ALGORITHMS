@@ -208,8 +208,8 @@ public:
         for (int i = start; i < nums.size(); ++i) {
             if (i == start || nums[i - 1] != nums[i]) {
                 for (vector<int>& subset : kSum(nums, static_cast<long long>(target) - nums[i], i + 1, k - 1)) {
-                    res.push_back({nums[i]});
-                    res.back().insert(end(res.back()), begin(subset), end(subset));
+                    subset.push_back({nums[i]});
+                    res.push_back(subset);
                 }
             }
         }
