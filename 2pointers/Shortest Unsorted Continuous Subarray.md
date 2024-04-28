@@ -26,9 +26,31 @@ Constraints:
 1 <= nums.length <= 104
 -105 <= nums[i] <= 105
  
+O(n^2)
+```
+class Solution {
+public:
+    int findUnsortedSubarray(vector<int>& nums) {
+        vector<int>cp = nums;
+        sort(cp.begin(), cp.end());
+        bool b = 0;
+        int first = -1, last = -1;
+        for (int i=0; i<nums.size(); i++) {
+            if (nums[i] != cp[i]) {
+                if (!b) {
+                    b = 1;
+                    first = i;
+                }
+                last = i;
+            }
+        }
+        if (first == -1) return 0;
+        return last - first + 1;
+    }
+};
+```
 
-Follow up: Can you solve it in O(n) time complexity?
-
+O(n)
 ```
 class Solution {
 public:
