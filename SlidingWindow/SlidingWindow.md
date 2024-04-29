@@ -38,7 +38,9 @@ int minSubArrayLen(int s, vector<int>& A) {
 }
 ```
 
-## Minimum Size Subarray Sum with negative numbers allowed [Explanation](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/solutions/143726/C++JavaPython-O(N)-Using-Deque/)
+## Minimum Size Subarray Sum with negative numbers allowed 
+
+[Explanation](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/solutions/143726/C++JavaPython-O(N)-Using-Deque/)
 
 Given an integer array nums and an integer k, return the length of the shortest non-empty subarray of nums with a sum of at least k. If there is no such subarray, return -1.
 A subarray is a contiguous part of an array.
