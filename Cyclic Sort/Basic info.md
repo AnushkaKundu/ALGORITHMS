@@ -15,3 +15,5 @@ Questions:
 [Find All Duplicates in an Array](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/Cyclic%20Sort/Find%20All%20Duplicates%20in%20an%20Array.md)
 
 [Set Mismatch](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/Cyclic%20Sort/Set%20Mismatch.md)
+
+[First Missing Positive](https://github.com/AnushkaKundu/ALGORITHMS/blob/main/Cyclic%20Sort/First%20Missing%20Positive.md)
