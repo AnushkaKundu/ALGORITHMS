@@ -9,12 +9,14 @@ The main idea behind this pattern is to maintain a heap of size **k** while iter
 ## Heap Complexities
 
 The time complexity of heap operations is as follows:
+- **Make heap** (Make the entire vector a heap): **O(n)**
+  > Often very useful. Instead of doing insertion of `n` elements in `0(n*log n)` time, we can achieve same in `O(n)` time.
 
-- **Insertion**: The time complexity for inserting an element into a heap is **O(log n)**, where **n** is the number of elements in the heap.
+- **Insertion**: **O(log n)**
 
-- **Deletion**: The time complexity for deleting an element from a heap is also **O(log n)**, as the element to be deleted must first be found in **O(log n)** time and then removed.
+- **Deletion**: **O(log n)**
 
-- **Peek (or top operation)**: The time complexity for retrieving the top element from a heap is **O(1)**, as the top element is always present at the root of the heap.
+- **Peek (or top operation)**: **O(1)**
 
 These complexities make heaps an efficient data structure for the **Top 'K' Elements** pattern. They allow us to insert and delete elements in logarithmic time, which is significantly faster than linear time operations. This efficiency is crucial when dealing with large datasets or real-time data streams.
 
