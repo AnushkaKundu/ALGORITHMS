@@ -8,7 +8,7 @@ How to update the boundary? How to choose the appropriate combination from `left
 
 
 ### General Syntax
-```
+```python
 def binary_search(array) -> int:
     def condition(value) -> bool:
         pass
@@ -44,7 +44,7 @@ Suppose you have n versions [1, 2, ..., n] and you want to find out the first ba
 You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
 
-```
+```python
 class Solution:
     def firstBadVersion(self, n) -> int:
         left, right = 1, n
@@ -59,7 +59,7 @@ class Solution:
 
 ### [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
 
-```
+```python
 def mySqrt(x: int) -> int:
     left, right = 0, x
     while left < right:
@@ -73,8 +73,8 @@ def mySqrt(x: int) -> int:
 ### [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You may assume no duplicates in the array.
 
-CPP
-```
+
+```cpp
 class Solution {
 public:
     int searchInsert(vector<int>& num, int target) {
@@ -93,8 +93,7 @@ public:
 };
 ```
 
-Python
-```
+```python
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums)
@@ -113,8 +112,7 @@ class Solution:
 Input: Array of weights, max-weight a partition of array can sum up to.
 Output: No of partitions in array.
 
-Python
-```
+```python
 def shipWithinDays(weights: List[int], D: int) -> int:
     def feasible(capacity) -> bool:
         days = 1
@@ -142,8 +140,7 @@ def shipWithinDays(weights: List[int], D: int) -> int:
 Input: Array of weights, no. of paritions
 Output: max-weight
 
-Python:
-```
+```python
 def splitArray(nums: List[int], m: int) -> int:        
     def feasible(threshold) -> bool:
         count = 1
@@ -169,8 +166,7 @@ def splitArray(nums: List[int], m: int) -> int:
 
 ### [Koko Eating Bananas](875. Koko Eating Bananas)
 
-Python
-```
+```python
 def minEatingSpeed(piles: List[int], H: int) -> int:
     def feasible(speed) -> bool:
         # return sum(math.ceil(pile / speed) for pile in piles) <= H  # slower        
@@ -188,8 +184,7 @@ def minEatingSpeed(piles: List[int], H: int) -> int:
 
 ### [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/)
 
-Python
-```
+```python
 def minDays(bloomDay: List[int], m: int, k: int) -> int:
     def feasible(days) -> bool:
         bonquets, flowers = 0, 0
@@ -214,8 +209,8 @@ def minDays(bloomDay: List[int], m: int, k: int) -> int:
 ```
 
 ### [Kth Smallest Number in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/description/)
-Python
-```
+
+```python
 def findKthNumber(m: int, n: int, k: int) -> int:
     def enough(num) -> bool:
         count = 0
@@ -238,8 +233,7 @@ def findKthNumber(m: int, n: int, k: int) -> int:
 
 ### [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)
 
-Python
-```
+```python
 def enough(distance) -> bool:  # two pointers
     count, i, j = 0, 0, 0
     while i < n or j < n:
@@ -264,8 +258,8 @@ def smallestDistancePair(nums: List[int], k: int) -> int:
 
 ### [Ugly Number III [Medium]](https://leetcode.com/problems/ugly-number-iii/)
 
-Python
-```
+
+```python
 def nthUglyNumber(n: int, a: int, b: int, c: int) -> int:
     def enough(num) -> bool:
         total = mid//a + mid//b + mid//c - mid//ab - mid//ac - mid//bc + mid//abc
@@ -287,8 +281,7 @@ def nthUglyNumber(n: int, a: int, b: int, c: int) -> int:
 
 ### [Find the Smallest Divisor Given a Threshold](https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/)
 
-Python
-```
+```python
 def smallestDivisor(nums: List[int], threshold: int) -> int:
     def condition(divisor) -> bool:
         return sum((num - 1) // divisor + 1 for num in nums) <= threshold
