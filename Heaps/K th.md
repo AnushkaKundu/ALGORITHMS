@@ -49,6 +49,61 @@ public:
 };
 ```
 
+## Kth Largest Element in a Stream
+**Problem Statement:**
+
+Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+
+Implement Kth Largest class:
+
+`KthLargest(int k, int[] nums)` Initializes the object with the integer k and the stream of integers nums.
+`int add(int val)` Appends the integer val to the stream and returns the element representing the kth largest element in the stream.
+
+**Examples:**
+```
+Input
+["KthLargest", "add", "add", "add", "add", "add"]
+[[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
+Output
+[null, 4, 5, 5, 8, 8]
+
+Explanation
+KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
+kthLargest.add(3);   // return 4
+kthLargest.add(5);   // return 5
+kthLargest.add(10);  // return 5
+kthLargest.add(9);   // return 8
+kthLargest.add(4);   // return 8
+```
+
+**Solution:**
+```cpp
+class KthLargest {
+public:
+    priority_queue<int, vector<int>, greater<int>> pq;
+    int size;
+    KthLargest(int k, vector<int> nums) {
+        size=k;
+        for(int i=0;i<nums.size();i++) {
+            pq.push(nums[i]);
+            if(pq.size()>k) pq.pop();
+        }
+    }
+    
+    int add(int val) {
+        pq.push(val);
+        if(pq.size()>size) pq.pop();
+        return pq.top();
+    }
+};
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * KthLargest* obj = new KthLargest(k, nums);
+ * int param_1 = obj->add(val);
+ */
+```
+
 ## 'K' Closest Points to the Origin
 **Problem Statement:**
 
@@ -199,6 +254,88 @@ public:
             pq.pop();
         }
         return ans;
+    }
+};
+```
+## Frequency Sort
+
+**Problem Statement:**
+
+Given an array of integers nums, sort the array in increasing order based on the frequency of the values. If multiple values have the same frequency, sort them in decreasing order.
+
+Return the sorted array.
+
+**Examples:**
+```
+Input: nums = [1,1,2,2,2,3]
+Output: [3,1,1,2,2,2]
+Explanation: '3' has a frequency of 1, '1' has a frequency of 2, and '2' has a frequency of 3.
+```
+```
+Input: nums = [2,3,1,3,2]
+Output: [1,3,3,2,2]
+Explanation: '2' and '3' both have a frequency of 2, so they are sorted in decreasing order.
+```
+```
+Input: nums = [-1,1,-6,4,5,-6,1,4,1]
+Output: [5,-1,4,4,-6,-6,1,1,1]
+```
+
+**Solution:**
+```cpp
+class Solution {
+public:
+    vector<int> frequencySort(vector<int>& A) {
+        unordered_map<int, int> count;
+        for (int a: A)
+            count[a]++;
+        sort(begin(A), end(A), [&](int a, int b) {
+            return count[a] == count[b] ? a > b : count[a] < count[b];
+        });
+        return A;
+    }
+};
+```
+
+## Least Number of Unique Integers after K Removals
+
+**Problem Statement:**
+
+Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements
+
+**Examples:**
+```
+Input: arr = [5,5,4], k = 1
+Output: 1
+Explanation: Remove the single 4, only 5 is left.
+```
+```
+Input: arr = [4,3,1,1,3,3,2], k = 3
+Output: 2
+Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
+```
+
+**Solution:**
+```cpp
+class Solution {
+public:
+    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {
+        unordered_map<int, int>count;
+        vector<int>heap;
+        for (auto ele : arr) {
+            count[ele]++;
+        }
+        for (auto ele : count) {
+            heap.push_back(ele.second);
+        }
+        make_heap(heap.begin(), heap.end(), greater<int>());
+        while(k > 0) {
+            k -= heap.front();
+            pop_heap(begin(heap), end(heap), greater<int>()); 
+            if (k >= 0)
+                heap.pop_back();   
+        }
+        return heap.size();
     }
 };
 ```
