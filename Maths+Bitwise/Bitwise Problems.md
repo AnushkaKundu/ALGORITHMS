@@ -1,5 +1,6 @@
 ## Number Complement
 
+**Problem Statement:**  
 The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.
 
 For example, The integer 5 is "101" in binary and its complement is "010" which is the integer 2.
@@ -16,6 +17,64 @@ public:
         n |= n >> 8;
         n |= n >> 16;
         return (((n - (n >> 1)) - 1) << 1) + 1 - nn;
+    }
+};
+```
+## Single Number
+
+**Problem Statement:**  
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+```cpp
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int x=0;
+        for (auto ele:nums) x^=ele;
+        return x;
+    }
+};
+```
+
+## Single Number II
+**Problem Statement:**  
+Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+**Examples:**
+```
+Example 1:
+
+Input: nums = [2,2,3,2]
+Output: 3
+Example 2:
+
+Input: nums = [0,1,0,1,0,1,99]
+Output: 99
+```
+
+**Constraints:**
+```
+1 <= nums.length <= 3 * 104
+-231 <= nums[i] <= 231 - 1
+Each element in nums appears exactly three times except for one element which appears once.
+```
+
+**Solution:**
+```cpp
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ones=0,twos=0;
+        for (auto ele : nums)
+        {
+            ones^=ele; ones&=~twos;
+            twos^=ele; twos&=~ones;
+        }
+        return ones;
     }
 };
 ```
