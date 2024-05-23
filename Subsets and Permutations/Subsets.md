@@ -2,7 +2,7 @@
 
 Iterative
 
-```
+```cpp
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& S) {
@@ -26,7 +26,7 @@ public:
 
 Iterative
 
-```
+```cpp
 class Solution {
 public:
     vector<vector<int>> subsetsWithDup(vector<int> &S) {
