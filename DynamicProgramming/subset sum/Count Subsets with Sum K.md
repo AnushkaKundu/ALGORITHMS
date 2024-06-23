@@ -1,6 +1,6 @@
 
 Botton - Up:
-```
+```cpp
 int findWays(vector<int>nums, int target){
 	if (target == 0) return 1;  
 	
