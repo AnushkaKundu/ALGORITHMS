@@ -249,4 +249,5 @@ int countRangeSum(vector<int> &nums, int N, int L, int R)
     }
 
     return mergeSort(sum, L, R, 0, N + 1);
-}```
+}
+```
