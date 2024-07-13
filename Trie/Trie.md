@@ -485,7 +485,54 @@ Output: 127
 
 **Solution:**
 ```cpp
+class TrieNode{
+public:
+    TrieNode *child[2];
+    
+    TrieNode(){
+        this->child[0] = NULL; //for 0 bit 
+        this->child[1] = NULL; //for 1 bit
+    }
 
+    void insert(int x){
+        TrieNode *t = this;
+        bitset<32> bs(x);
+        
+        for(int j=31; j>=0; j--){
+            if(!t->child[bs[j]]) 
+                t->child[bs[j]] = new TrieNode();
+            t = t->child[bs[j]];
+        }    
+    }
+
+    int maxXOR(int n){
+        TrieNode *t = this;
+        bitset<32> bs(n);
+        int ans=0; 
+        for(int j=31; j>=0; j--){
+            if(t->child[!bs[j]]) {
+                ans += (1<<j);
+                t = t->child[!bs[j]];
+            }
+            else t = t->child[bs[j]];
+        }
+        return ans;
+    }
+};
+class Solution {
+public:
+    int findMaximumXOR(vector<int>& nums) {
+        TrieNode trie;
+        for(auto &n : nums) 
+            trie.insert(n); 
+        
+        int ans=0;
+        for(auto n : nums){
+            ans = max(ans, trie.maxXOR(n)); 
+        }
+        return ans;
+    }
+};
 ```
 
 ## [Word Search II](https://leetcode.com/problems/word-search-ii/description/)
