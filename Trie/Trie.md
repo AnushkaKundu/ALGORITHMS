@@ -1,12 +1,3 @@
-## []()
-
-**Problem Statement:**
-**Examples:**
-**Constraints:**
--
-
-**Solution:**
-
 ## [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
 
 A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
@@ -708,5 +699,101 @@ public class AutocompleteSystem {
         }
         return res;
     }
+}
+```
+
+## [Number of Distinct Substrings in a String](https://www.naukri.com/code360/problems/count-distinct-substrings_985292?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_tries_videos)
+
+Given a string 'S', you are supposed to return the number of distinct substrings(including empty substring) of the given string. You should implement the program using a trie.
+
+
+Sample Input 1 :
+2
+sds
+abc
+
+Sample Output 1 :
+6
+7
+
+Explanation of Sample Input 1 :
+
+In the first test case, the 6 distinct substrings are { ‘s’,’ d’, ”sd”, ”ds”, ”sds”, “” }
+
+In the second test case, the 7 distinct substrings are {‘a’, ‘b’, ‘c’, “ab”, “bc”, “abc”, “” }.
+
+Sample Input 2 :
+2
+aa
+abab
+
+Sample Output 2 :
+3
+8
+
+Explanation of Sample Input 2 :
+
+In the first test case, the two distinct substrings are {‘a’, “aa”, “” }.
+
+In the second test case, the seven distinct substrings are {‘a’, ‘b’, “ab”, “ba”, “aba”, “bab”, “abab”, “” }
+
+
+```cpp
+#include <bits/stdc++.h>
+class Trie {
+private: 
+    vector<Trie*> children; 
+    bool isword;
+    int words;
+
+public:
+    Trie() {
+        children = vector<Trie*>(26, nullptr);
+        isword = false;
+        words = 0;
+    }
+    
+    void insert(string word) {
+        Trie* node = this;
+        for (char ch : word) {
+            if (!node->children[ch - 'a']) {
+                node->children[ch - 'a'] = new Trie();
+            }
+            node = node->children[ch - 'a'];
+        }
+        if (!node->isword) {
+            words++;
+        }
+        node->isword = true;
+    }
+
+    bool search(string word) {
+        Trie* node = this;
+        for (char ch : word) {
+            if (!node->children[ch - 'a']) {
+                return false;
+            }
+            node = node->children[ch - 'a'];
+        }
+        return node->isword;
+    }
+
+    int getWords() {
+        return words;
+    }
+};
+int countDistinctSubstrings(string &s)
+{
+    int n = s.length();
+    Trie trie;
+    for (int i=0; i<n; i++)
+        for (int j=i; j<n; j++) {
+            string ss = s.substr(i, j-i+1);
+            if (!trie.search(ss)) {
+                trie.insert(ss);
+            }
+        }
+            
+    return trie.getWords() + 1;
 }
 ```
