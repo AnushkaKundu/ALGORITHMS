@@ -37,8 +37,11 @@ Ans = len(str) - LPS(str)
 
 ## Longest repeating Subsequence: 
 Idea: It works same as LCS with an extra condition. That is in the `if` condition, i.e.: `str1[i-1] == str2[j-1]` we add an extra constraint, `i != j`
+
 ![image](https://github.com/user-attachments/assets/6affd6a7-1959-41c7-ad08-9f4aa1deb313)
 
+## Longest repeating and non-overlapping substring
+[link](https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/)
 
 ## Find if `a` is a subsequence of `b`
 Idea: if a == LCS(a, b), return `true`
