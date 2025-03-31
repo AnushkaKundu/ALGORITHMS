@@ -161,3 +161,43 @@ int main() {
 Similar: 
 Car Pooling 
 https://leetcode.com/problems/car-pooling/
+
+## [Merge Overlapping Intervals: ](https://leetcode.com/problems/non-overlapping-intervals/description/)
+Minimum of intervals needed to remove to make all the intervals non overlapping. 
+
+## [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)
+There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.
+
+
+Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart <= x <= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.
+
+
+Given the array points, return the minimum number of arrows that must be shot to burst all balloons.
+
+### Approach: 
+Sort intervals by end time. Always burst 1st ballon. Maintain index of last arrow, which is end of 1st interval for now. run a loop to detect that if the next intervals start before index of last arrow, if yes means they are burst ignore that interval. Otherwise, burst the baloon by putting next arrow on end of that interval. And update last arrow index.
+
+```cpp
+class Solution {
+public:
+    static bool endSorter(vector<int>&a, vector<int>&b)
+    {
+        return a[1] == b[1] ? a[0] < b[0] : a[1] < b[1];
+    }
+    int findMinArrowShots(vector<vector<int>>& points) {
+        int size = points.size();
+        sort(points.begin(), points.end(), endSorter);
+        int arrow = points[0][1];
+        int count = 1;
+        for (int i = 1; i < size; i++)
+        {
+            if (arrow >= points[i][0] && arrow <= points[i][1])
+                continue;
+            count++;
+            arrow = points[i][1];
+        }
+        return count;
+    }
+};
+```
+
